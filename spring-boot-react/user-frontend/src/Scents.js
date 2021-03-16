@@ -36,7 +36,8 @@ function Scents() {
     <ul>
       {scents.map(scent => (
         <li key={scent.id}>
-          {scent.name} ({scent.name})
+          <img src={`http://192.168.0.167:1202/${scent.thumbnailFilename}`} />
+          {scent.name} ({scent.id}) {scent.thumbnailFilename}
         </li>
       ))}
     </ul>
