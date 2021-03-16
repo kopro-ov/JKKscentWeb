@@ -1,9 +1,10 @@
 ﻿# JKKscentWeb
+ ## 클라이언트 & 서버 구성도
+ ![client_server](client_server.png)
+ ## 프로젝트 
+ ### 프로젝트 구조
   - spring-boot-react
-     - boot-multi-module (spring boot)
-        - core-module : Entity, Repository 및 Utility 등
-        - api-module : api 애플리케이션
-        - admin-module : 관리자 애플리케이션
-        - batch-module : 배치(batch) 모음
-     - user-frontend (react)
-        - src    
+     - backend 
+     - user-frontend
+### 프로젝트 개발 환경
+  - mysql(8.0.23), spring boot(2.4.3), react(17.0.1)
