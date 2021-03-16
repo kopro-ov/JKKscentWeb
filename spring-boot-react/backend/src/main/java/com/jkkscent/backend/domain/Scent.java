@@ -1,16 +1,18 @@
 package com.jkkscent.backend.domain;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity
 @Getter
-@Setter
+@NoArgsConstructor
+@Entity
 public class Scent {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="scent_id")
     private Long id;
 
@@ -20,5 +22,15 @@ public class Scent {
     private String regDt;
     private String categories;
     private String detail;
+
+    @Builder
+    public Scent(String name, Long price, String thumbnailFilename, String regDt, String categories, String detail) {
+        this.name = name;
+        this.price = price;
+        this.thumbnailFilename = thumbnailFilename;
+        this.regDt = regDt;
+        this.categories = categories;
+        this.detail = detail;
+    }
 
 }
