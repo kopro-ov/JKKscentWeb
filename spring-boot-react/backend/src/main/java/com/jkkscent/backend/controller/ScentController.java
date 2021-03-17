@@ -17,14 +17,15 @@ public class ScentController {
 
     private final ScentService scentService;
 
+    @GetMapping("")
+    public List<ScentResponseDto> findAll() {
+        return scentService.findAll();
+    }
+
     @GetMapping("/{id}")
     public ScentResponseDto findById(@PathVariable Long id) {
         return scentService.findById(id);
     }
 
-    @GetMapping("")
-    public List<ScentResponseDto> findAll() {
-        return scentService.findAll();
-    }
 
 }
